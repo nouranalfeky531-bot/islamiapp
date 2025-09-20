@@ -165,12 +165,12 @@ class OnboardmanagerState extends State<Onboardmanager> {
 
 Future<void> setprefs(state) async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
- bool whatstate=  prefs.getBool("intro_seen")??false;
-  if(whatstate==true){
-   whatstate=state;
-  }
+ // bool whatstate=  prefs.getBool("intro_seen")??false;
+  // if(whatstate==true){
+  //  whatstate=state;
+  // }
 
-  prefs.setBool("intro_seen",whatstate?? false);
+  prefs.setBool("intro_seen",state);
 
   print("======================================");
 
